@@ -10,10 +10,11 @@ namespace src
         private uint waterRate;
         private uint waterSpeed;
         private uint tilesGiven;
-        public Player currentPlayer;
+        private uint timeLimit;
+        private Player currentPlayer;
         List<Player> players;
 
-        public Game(int numPlayers, uint waterRate, uint waterSpeed, uint TimeLimitSeconds)
+        public Game(int numPlayers, uint waterRate, uint waterSpeed, uint timeLimitSeconds)
         {
             for (int i = 0; i < numPlayers; i++)
             {
@@ -24,6 +25,7 @@ namespace src
             this.waterLevel = 0;
             this.waterRate = waterRate;
             this.waterSpeed = waterSpeed;
+            this.timeLimit = timeLimitSeconds;
         }
 
         public Tile GetNextTile()
@@ -33,6 +35,11 @@ namespace src
                 this.tilesGiven++;
                 return t;
            }
+
+        public Player GetCurrentPlayer()
+        {
+            return this.currentPlayer;
+        }
 
         public void Fill()
         {

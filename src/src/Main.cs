@@ -18,6 +18,13 @@ namespace src
                 t.Rotate(false);
                 Console.WriteLine(t.GetRotation());
             }
+
+            Tile t2 = new Tile(g.GetCurrentPlayer(), (int)Tile.Typ.straight);
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(t2.getMatchBits());
+                t2.Rotate(true);
+            }
         }
     }
 }
