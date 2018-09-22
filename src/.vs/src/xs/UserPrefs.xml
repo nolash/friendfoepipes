@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{0BA91C7A-CE28-4A2B-B0BE-E1919A5D7E73}|Default">
-  <MonoDevelop.Ide.ItemProperties.src PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Player.cs">
+  <MonoDevelop.Ide.ItemProperties.src PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Tile.cs">
     <Files>
-      <File FileName="src/Player.cs" Line="12" Column="1" />
-      <File FileName="src/Tile.cs" Line="18" Column="1" />
+      <File FileName="src/Player.cs" Line="9" Column="1" />
+      <File FileName="src/Tile.cs" Line="9" Column="16" />
+      <File FileName="src/Game.cs" Line="19" Column="41" />
+      <File FileName="src/Main.cs" Line="9" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

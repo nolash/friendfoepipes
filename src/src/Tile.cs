@@ -1,20 +1,36 @@
 ﻿using System;
 
-namespace foo
+namespace src
 {
     public class Tile
     {
-        char type;
-        char rotation;
+        public Typ typ;
+        int rotation;
         Player owner;
-        char fill;
+        int fill;
 
-        public Tile(Player owner)
-        {
-            this.owner = owner;
+        public enum Typ {
+            straight,
+            turn,
+            tee,
+            cross,
+            max
         }
 
-        public rotate(int dir) {
+        public Tile(Player owner, int typ)
+        {
+            this.owner = owner;
+            this.typ = (Typ)typ;
+        }
+
+        public int GetRotation()
+        {
+            return this.rotation;
+        }
+
+        // dir true = cw
+        public void Rotate(bool dir)
+        {
             {
                 if (dir)
                 {
@@ -22,9 +38,14 @@ namespace foo
                 }
                 else
                 {
-                    this.rotation--;
+                    this.rotation+=3;
                 }
                 this.rotation %= 4;
             }
+        }
+        public void Fill(int amount)
+        {
+
+        }
     }
 }

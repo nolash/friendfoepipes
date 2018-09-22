@@ -1,5 +1,5 @@
 ﻿using System;
-namespace foo
+namespace src
 {
     public class Player
     {
