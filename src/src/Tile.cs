@@ -10,9 +10,7 @@ namespace src
         private int rotation;
         private Player owner;
         private int fill;
-        private Direction entry;
         private List<Tile> neighbours;
-        private object otherTileMatchBits;
 
         public enum Typ {
             stop = 1,
@@ -166,7 +164,7 @@ namespace src
 
         public int getMatchBits()
         {
-            if (this.rotation == 0)
+            if (this.rotation == 0 || (int)this.typ == 0x0f) 
             {
                 return (int)this.typ;
             }
