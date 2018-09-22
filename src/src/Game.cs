@@ -6,10 +6,14 @@ namespace src
 
     public class Game
     {
+        private uint waterLevel;
+        private uint waterRate;
+        private uint waterSpeed;
+        private uint tilesGiven;
         public Player currentPlayer;
         List<Player> players;
 
-        public Game(int numPlayers, int waterStep, int waterRate, int TimeLimit)
+        public Game(int numPlayers, uint waterRate, uint waterSpeed, uint TimeLimitSeconds)
         {
             for (int i = 0; i < numPlayers; i++)
             {
@@ -17,14 +21,22 @@ namespace src
                 this.players.Add(new Player());
             }
             this.currentPlayer = this.players[0];
+            this.waterLevel = 0;
+            this.waterRate = waterRate;
+            this.waterSpeed = waterSpeed;
         }
 
-        public Tile getNextTile()
+        public Tile GetNextTile()
             {
                 Random rnd = new Random();
-                int max = (int)Tile.Typ.max;
-                Tile t = new Tile(currentPlayer, rnd.Next(0, max));
+                Tile t = new Tile(currentPlayer, (int)Tile.Typ.start);
+                this.tilesGiven++;
                 return t;
            }
+
+        public void Fill()
+        {
+            this.waterLevel += this.waterRate;
+        }
     }
 }

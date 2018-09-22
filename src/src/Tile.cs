@@ -4,17 +4,30 @@ namespace src
 {
     public class Tile
     {
-        public Typ typ;
-        int rotation;
-        Player owner;
-        int fill;
+        private Typ typ;
+        private Direction dir;
+        private int rotation;
+        private Player owner;
+        private int fill;
+        private int entrance;
 
         public enum Typ {
+            empty,
             straight,
             turn,
             tee,
             cross,
-            max
+            stop,
+            start
+        }
+
+        public enum Direction
+        {
+            north,
+            east,
+            south,
+            west,
+            max,
         }
 
         public Tile(Player owner, int typ)
@@ -23,9 +36,19 @@ namespace src
             this.typ = (Typ)typ;
         }
 
+        public Typ GetTyp()
+        {
+            return this.typ;
+        }
+
         public int GetRotation()
         {
             return this.rotation;
+        }
+
+        public Player GetOwner()
+        {
+            return this.owner;
         }
 
         // dir true = cw
@@ -43,9 +66,26 @@ namespace src
                 this.rotation %= 4;
             }
         }
-        public void Fill(int amount)
-        {
 
+        public void StartFill(Direction dir)
+        {
+            this.dir = dir;
+        }
+
+        public Direction GetDirection()
+        {
+            return this.dir;
+        }
+
+        //
+        public void FillOne(int amount)
+        {
+            this.fill += amount;
+        }
+
+        public int GetFill()
+        {
+            return fill;
         }
     }
 }

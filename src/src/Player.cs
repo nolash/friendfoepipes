@@ -3,7 +3,8 @@ namespace src
 {
     public class Player
     {
-        int score;
+        private int score;
+        private int moves;
         public Player() {
             this.score = 0;
         }
