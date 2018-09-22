@@ -72,6 +72,451 @@ namespace src
                 }
                
             }
+
+            Tile pivotManual = new Tile(g.GetCurrentPlayer(), (int)Tile.Typ.stop);
+            Tile compareManual = new Tile(g.GetCurrentPlayer(), (int)Tile.Typ.stop);
+            compareManual.Rotate(true);
+            compareManual.Rotate(true);
+            pivotManual.CheckMatchesWith(compareManual, 0);
+
+            List<bool> matchCorrects = new List<bool>();
+
+            // pivot typ stop 0x01
+
+            // compare typ stop 0x01
+
+            // compare rotate 0
+
+            matchCorrects.Add(false);
+                matchCorrects.Add(false);
+                matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+                // rotate 1
+            matchCorrects.Add(false);
+                 matchCorrects.Add(false);
+                 matchCorrects.Add(false);
+                 matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // compare typ turn 0x03
+
+            // compare rotate 0
+
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+
+            // compare typ straight
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+
+            // compare typ tee
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+
+            // compare typ cross
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+
+            // pivot type turn
+
+            // compare typ stop
+
+            // compare rotate 0
+
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // compare typ turn
+
+            // compare rotate 0
+
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+
+            // compare typ straight
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // compare typ tee
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // compare typ cross
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(true);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+
+            // pivot type straight
+
+            // compare typ stop
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // compare typ turn
+
+            // compare rotate 0
+
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+
+            // compare typ straight
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // compare typ tee
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // compare typ cross
+
+            // compare rotate 0
+
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 1
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 2
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            // rotate 3
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+            matchCorrects.Add(true);
+            matchCorrects.Add(false);
+
+            for (int i = 0; i < 3; i++) // check all types for pivot
+            {
+                Tile tPivot = new Tile(g.GetCurrentPlayer(), tests[i]);
+
+                for (int j = 0; j < 5; j++) // check all types for compare
+                {
+                    Tile tCompare = new Tile(g.GetCurrentPlayer(), tests[j]);
+                    for (int k = 0; k < 4; k++) // check all rotations
+                    {
+                        for (int l = 0; l < 4; l++) { // check all directions
+                            bool doesMatch = tPivot.CheckMatchesWith(tCompare, l);
+                            Console.WriteLine(String.Format("{0:00} {1:00} {2:00} {3:00} {4} - {5}", i, j, k, l, doesMatch, matchCorrects[(i*16*5)+(j*16)+(k*4)+l]));
+                        }
+                        tCompare.Rotate(true);
+                    }
+                }
+            }
+
         }
     }
 }

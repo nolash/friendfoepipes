@@ -128,13 +128,21 @@ namespace src
         public bool CheckMatchesWith(Tile t, int dirToTile)
         {
             int ourMatchBits = this.getMatchBits();
-            if ((ourMatchBits & 1 << (dirToTile+1)) == 0)
+
+            // check if we have an opening in this direction, if not it matches
+            if ((ourMatchBits & 1 << dirToTile) == 0)
             {
                 return false;
             }
+
+            // get the bits of the other tile
             int otherTileMatchBits = t.getMatchBits();
-            int oppositeDir = (dirToTile + 2) % 4;
-            if ((otherTileMatchBits & 1 << (oppositeDir+1)) == 0)
+
+            int oppositeDir = 1 << ((dirToTile + 2) % 4);
+
+            // get the bit we are comparing against
+            //int compareBit = 1 << (oppositeDir);
+            if ((otherTileMatchBits & oppositeDir) == 0)
             {
                 return false;
             }
