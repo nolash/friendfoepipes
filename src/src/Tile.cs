@@ -149,6 +149,7 @@ namespace src
             return true;
         }
 
+        // this logic is faulty. Should probably return three states; 0 = spill (endgame), 1 = flow can continue, 2 = flow is blocked
         public bool CheckOverflow()
         {
             int matchBits = this.getMatchBits();
